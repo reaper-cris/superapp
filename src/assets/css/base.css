@@ -1,0 +1,62 @@
+@import './normalize.css';
+
+/*root获取到的就是html跟标签*/
+/*定义css中的变量*/
+:root{
+  --color-text:#666;
+  --color-high-text:#ff5777;
+  --color-tint:#ff8198;
+  --color-background:#fff;
+  --font-size:14px;
+  --line-height:1.5;
+}
+
+*,
+*:before,
+*:after{
+  margin: 0;
+  padding: 0;
+  /*box-sizing:border-box 设置的边框和内边距的值是包含在width内的*/
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei','微软雅黑',Arial,sans-serif;
+  /*禁止用户鼠标在页面上选中文字/图片等*/
+  user-select: none;
+  /*webkit是苹果浏览器，tap点击，highlight背景高亮，color颜色，颜色用数值调节*/
+  -webkit-tap-highlight-color: transparent;
+  background: var(--color-background);
+  color:var(--color-text);
+  /* vw:属于css3中的一个自适用布局单位 */
+  /* 视口单位有四个：vw（1vw=视口宽度的1%）、vh（1vh=视口高度的1%）、vmin（等于vw和vh中的小值）、vmax（等于vw和vh中的大值） */
+  width:100vw;
+}
+
+a{
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+/* 清除高度塌陷 */
+.clear-fix:after{
+  clear:both;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+.clear-fix{
+  zoom:1;
+}
+
+.left{
+  float: left;
+}
+.right{
+  float:right;
+}
+
